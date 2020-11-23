@@ -20,15 +20,19 @@
     src: url('/fonts/Avenir-Heavy.ttf');
 }
 
+
+
 /* INHERIT */
 
 %box {
-    width: 53.1rem;
-    height: 35.8rem;
+    padding: 5rem 0rem 2rem 4rem;
+    
     background-color: rgba($color:  #68C9BA, $alpha: .1);
     border-radius: 5rem;
     position: relative;
     }
+
+    
 
 /* MIXIN */
 
@@ -39,14 +43,39 @@
     align-items: $align-items;
   }
 
+  @media (max-width: 570px) {
+    p {
+        font-size: 1.4rem;
+    }
+  }
 
-* {
+  @media (min-width: 50px) {
+    html {
+        font-size: 8px;
+    }
+  }
+
+
+  @media (min-width: 960px) {
+    html {
+        font-size: 9px;
+    }
+  }
+
+  @media (min-width: 1140px) {
+    html {
+        font-size: 10px;
+    }
+  }
+  
+
+html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 10px;
     text-decoration: none;
+    
     
 }
 a:hover {
@@ -80,7 +109,6 @@ h5 {
 p {
     font-family: 'Avenir-Medium';
     color: #4B5D68;
-    font-size: 1.8rem;
 }
 
 header {
@@ -91,6 +119,25 @@ header {
                 img {
                     margin-left: 2rem;
                 }
+        }
+
+        .collapse {
+            ul {
+                margin-left: 12.1rem;
+    
+                li {
+                    a {
+                        margin-right: 4rem;
+                        font-size: 1.6rem;
+                        font-family: Avenir-Medium;
+                        color: #4B5D68;
+                        &:hover {
+                            color: #F063B8 !important;
+                        }
+                    }
+                }
+           
+            }
         }
     }
     .header-wrapper {
@@ -121,7 +168,7 @@ header {
             transition: 0.5s;
             border: 2px solid transparent;
             position: absolute;
-            margin: 17rem 0;
+            margin: 14rem 0;
             &:hover {
                 background-color: #fff;
                 border: 2px solid #9C69E2;
@@ -130,32 +177,31 @@ header {
         }
 
         img {
-            margin-left: -10rem;
             margin-top: 5rem;
             z-index: 2;
         }
     }
 
-    .collapse {
-        ul {
-            margin-left: 12.1rem;
-            .nav-link {
-                margin-right: 4rem;
-                font-size: 1.6rem;
-                font-family: Avenir-Medium;
-                color: #4B5D68;
-            }
-        }
-    }
+    
 }
 
 .wrapper-leveldata {
     border-radius: 5rem;
     padding: 2.5rem 0;
     background-color: rgba(#F063B8, .15);
+    p {
+        font-family: 'Avenir-Medium';
+        font-size: 1.8rem;
+    }
 }
 
-
+@media screen and (max-width: 998px) {
+    .wrapper-leveldata {
+        h1, p {
+            text-align: center;
+        }
+    }
+  }
 
 
 section {
@@ -226,39 +272,43 @@ section {
             }
     
             
-            .carousel-indicators {
-                bottom: -8rem;
-                left: -5rem;
-                right: auto;
-                
-              }
-              
-              .carousel-indicators li {
-                width: .5rem;
-                height: .5rem;
-                border-radius: 100%;
-              }
-              
-              .carousel-indicators li:not(:last-child) {
-                margin-right: 20px;
+            @media screen and (min-width: 1200px) {
+                .carousel-indicators {
+                    bottom: -8rem;
+                    left: -5rem;
+                    right: auto;
+                    
+                  }
+                  
+                  .carousel-indicators li {
+                    width: .5rem;
+                    height: .5rem;
+                    border-radius: 100%;
+                  }
+                  
+                  .carousel-indicators li:not(:last-child) {
+                    margin-right: 20px;
+                  }
+    
+                  .carousel-control-prev {
+                    height: 5rem;
+                    width: 5rem;
+                    top: 37rem;
+                    left: 95rem;
+                    position: absolute;
+                  }
+    
+                  .carousel-control-next {
+                    height: 5rem;
+                    width: 5rem;
+                    top: 37rem;
+                    right: 4rem;
+                    position: absolute;
+                    
+                  }
               }
 
-              .carousel-control-prev {
-                height: 5rem;
-                width: 5rem;
-                top: 37rem;
-                left: 95rem;
-                position: absolute;
-              }
-
-              .carousel-control-next {
-                height: 5rem;
-                width: 5rem;
-                top: 37rem;
-                right: 4rem;
-                position: absolute;
-                
-              }
+            
               
               
               
@@ -268,13 +318,10 @@ section {
 
         .card {
             border-radius: 2rem;
-            width: 60.45rem;
-            height: 33.0rem;
-            box-shadow: 0 4rem 4rem -2rem gray;
             
 
             .card-inner {
-                padding: 6rem 7rem;
+                padding: 6rem 7rem; 
             }
 
             .card-body {
@@ -305,13 +352,26 @@ section {
 
     .section-4 {
 
+        @media screen and (max-width: 777px) {
+            .button-learn-more {
+              margin: auto;
+              padding: 1rem 2rem;
+            }
+            .button-demo {
+                margin: auto;
+                padding: 1rem 2rem;
+            }
+            h1 {
+                margin: auto;
+            }
+            p {
+                margin: auto;
+            }
+          }
+
         border-top: .1rem solid rgba($color: #4B5D68, $alpha: 0.3);
         padding-top: 10rem;
 
-        .demo-wrapper {
-            @include flex(flex, row, space-between, center);
-            
-        }
 
         h1 {
             font-family: Helvetica, sans-serif;
@@ -324,24 +384,33 @@ section {
             font-size: 18px;
         }
     
-        .demo {
-            a {
+        .button-demo {
                 img {
                     margin-left: 2rem;
                 }
-            }
-            .button-learn-more {
-                margin-right: 3rem;
-            }
+        }
+        .button-learn-more {
+            margin-right: 2rem;
         }
     }
+    
     }
+
+
+    
 
 footer {
     .info {
-        .adress {
-            margin-top: 3rem;
-            margin-bottom: 2rem;
+        
+        @media only screen and (min-width: 430px) {
+            .adress {
+                margin-top: 3rem;
+                margin-bottom: 2rem;
+                
+            }
+            
+          }
+          .adress {
             p {
                 font-size: 1.6rem;
                 font-family: 'Avenir-Medium';

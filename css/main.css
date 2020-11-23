@@ -1,0 +1,368 @@
+@font-face {
+  font-family: 'Avenir-Medium';
+  src: url("/fonts/AvenirLTStd-Medium.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Roman';
+  src: url("/fonts/AvenirLTStd-Roman.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Book';
+  src: url("/fonts/AvenirLTStd-Book.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Heavy';
+  src: url("/fonts/Avenir-Heavy.ttf");
+}
+
+/* MIXIN */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: Helvetica, sans-serif;
+  color: #212353;
+  font-weight: bold;
+  line-height: 130%;
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-family: 'Avenir-Roman';
+  font-size: 1.6rem;
+  color: #212353;
+  line-height: 3rem;
+}
+
+h5:hover {
+  color: #F063B8;
+}
+
+p {
+  font-family: 'Avenir-Medium';
+  color: #4B5D68;
+  font-size: 1.8rem;
+}
+
+header {
+  margin-top: 5rem;
+}
+
+header .header-wrapper {
+  margin-top: 13rem;
+  position: relative;
+}
+
+header .header-wrapper h1 {
+  font-size: 6.2rem;
+}
+
+header .header-wrapper p {
+  font-size: 1.8rem;
+  font-family: 'Avenir-Medium';
+  margin: 4rem 0;
+  position: absolute;
+  z-index: 3;
+}
+
+header .header-wrapper .button-learn-more {
+  padding: 1.6rem 3.7rem;
+  background-color: #9C69E2;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: Averin-Heavy;
+  font-weight: bold;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 2px solid transparent;
+  position: absolute;
+  margin: 17rem 0;
+}
+
+header .header-wrapper .button-learn-more:hover {
+  background-color: #fff;
+  border: 2px solid #9C69E2;
+  color: #212353;
+}
+
+header .header-wrapper img {
+  margin-left: -10rem;
+  margin-top: 5rem;
+  z-index: 2;
+}
+
+header .collapse ul {
+  margin-left: 12.1rem;
+}
+
+header .collapse ul .nav-link {
+  margin-right: 4rem;
+  font-size: 1.6rem;
+  font-family: Avenir-Medium;
+  color: #4B5D68;
+}
+
+.wrapper-leveldata {
+  border-radius: 5rem;
+  padding: 2.5rem 0;
+  background-color: rgba(240, 99, 184, 0.15);
+}
+
+.wrapper-testimonials {
+  border-radius: 5rem;
+  padding: 10rem 0;
+  background-color: #9c69e2;
+}
+
+section {
+  margin: 5rem 0;
+}
+
+section .features .box {
+  width: 53.1rem;
+  height: 35.8rem;
+  background-color: #68C9BA;
+  -webkit-clip-path: polygon(35% 0, 100% 0%, 100% 100%, 10% 100%);
+          clip-path: polygon(35% 0, 100% 0%, 100% 100%, 10% 100%);
+  position: relative;
+}
+
+section .testimony .wrapper-testimony {
+  border-radius: 5rem;
+  padding: 25rem 0 13rem 0;
+  background-color: #9C69E2;
+}
+
+section .testimony .wrapper-testimony .carousel-indicators {
+  bottom: -8rem;
+  left: -5rem;
+  right: auto;
+}
+
+section .testimony .wrapper-testimony .carousel-indicators li {
+  width: .5rem;
+  height: .5rem;
+  border-radius: 100%;
+}
+
+section .testimony .wrapper-testimony .carousel-indicators li:not(:last-child) {
+  margin-right: 20px;
+}
+
+section .testimony .wrapper-testimony .carousel-control-next {
+  bottom: -45rem;
+  right: 0rem;
+  left: auto;
+  width: 2%;
+  height: 2%;
+}
+
+section .testimony .wrapper-testimony .carousel-control-prev {
+  bottom: -45rem;
+  right: 5rem;
+  left: auto;
+}
+
+section .testimony .card {
+  border-radius: 2rem;
+  width: 60.45rem;
+  height: 33.0rem;
+}
+
+section .testimony .card .card-inner {
+  padding: 6rem 7rem;
+}
+
+section .testimony .card .card-body .card-text h3 {
+  font-family: 'Avenir-Heavy';
+  font-size: 1.8rem;
+  color: #212353;
+}
+
+section .testimony .card .card-body .card-text h5 {
+  font-family: 'Avenir-Medium';
+  font-size: 1.4rem;
+  color: #9C69E2;
+}
+
+section .testimony .card .card-body .card-text p {
+  font-family: 'Avenir-Roman';
+  font-size: 1.8rem;
+  color: #4B5D68;
+}
+
+section .testimony .card .card-body img {
+  width: 8rem;
+  height: 8rem;
+}
+
+section .section-4 {
+  border-top: 0.1rem solid rgba(75, 93, 104, 0.3);
+  padding-top: 10rem;
+}
+
+section .section-4 .demo-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .section-4 h1 {
+  font-family: Helvetica, sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+section .section-4 p {
+  font-family: Avenir-Medium;
+  font-size: 18px;
+}
+
+section .section-4 .demo a img {
+  margin-left: 2rem;
+}
+
+section .section-4 .demo .button-learn-more {
+  margin-right: 3rem;
+}
+
+footer .info .adress {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+footer .info .adress p {
+  font-size: 1.6rem;
+  font-family: 'Avenir-Medium';
+  color: #212353;
+  letter-spacing: .5px;
+  line-height: 1.8rem;
+}
+
+footer .info .contact p {
+  font-size: 1.6rem;
+  font-family: 'Avenir-Book';
+  color: #212353;
+  letter-spacing: .5px;
+  line-height: 1.8rem;
+}
+
+footer h3 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: 'Avenir-Roman';
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+footer .footer-end {
+  margin: 5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .social-media-accounts i {
+  margin-right: 1.7rem;
+  font-size: 5rem;
+}
+
+footer .social-media-accounts #facebook:hover {
+  color: #3b5998;
+  cursor: pointer;
+}
+
+footer .social-media-accounts #twitter:hover {
+  color: #1DA1F2;
+  cursor: pointer;
+}
+
+footer .social-media-accounts #instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+footer .copyright p {
+  font-size: 1.2rem;
+  font-family: 'Avenir-Book';
+}
+
+/** BUTTONS **/
+.button-learn-more {
+  padding: 1.6rem 3.7rem;
+  background-color: #F063B8;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: Averin-Heavy;
+  font-weight: bold;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 2px solid transparent;
+}
+
+.button-learn-more:hover {
+  background-color: #fff;
+  border: 2px solid #F063B8;
+}
+
+.button-demo {
+  padding: 1.7rem 2rem 1.7rem 2.9rem;
+  background-color: #fff;
+  border-radius: 50px;
+  color: #212353;
+  font-size: 1.6rem;
+  font-family: Averin-Heavy;
+  font-weight: bold;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.button-demo:hover {
+  background-color: #F063B8;
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */

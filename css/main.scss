@@ -155,11 +155,7 @@ header {
     background-color: rgba(#F063B8, .15);
 }
 
-.wrapper-testimonials {
-    border-radius: 5rem;
-    padding: 10rem 0;
-    background-color: rgba(#9C69E2, 1);
-}
+
 
 
 section {
@@ -219,9 +215,15 @@ section {
 
         .wrapper-testimony {
             border-radius: 5rem;
-            padding: 25rem 0 13rem 0;
+            padding: 8rem 0 13rem 0;
             background-color: #9C69E2;
             position: relative;
+
+            h1 {
+               font-family: Helvetica, sans-serif;
+               font-weight: bolder;
+               color: #fff;
+            }
     
             
             .carousel-indicators {

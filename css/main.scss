@@ -115,11 +115,17 @@ header {
     margin-top: 5rem;
 
     nav {
-        .button-demo {
-                img {
-                    margin-left: 2rem;
-                }
+        @media screen and (max-width: 991px) {
+            .button-demo {
+                visibility: hidden;
         }
+          }
+          .button-demo {
+            img {
+                margin-left: 2rem;
+            }
+    }
+        
 
         .collapse {
             ul {
@@ -319,10 +325,18 @@ section {
         .card {
             border-radius: 2rem;
             
+            @media screen and (max-width: 489px) {
+                .card-inner {
+                    padding: 2rem 2rem; 
+                }
+              }
 
-            .card-inner {
-                padding: 6rem 7rem; 
-            }
+              @media screen and (min-width: 489px) {
+                .card-inner {
+                    padding: 6rem 7rem;  
+                }
+              }
+            
 
             .card-body {
                 .card-text {
@@ -336,6 +350,7 @@ section {
                         font-size: 1.4rem;
                         color: #9C69E2;
                     }
+                    
                     p {
                         font-family: 'Avenir-Roman';
                         font-size: 1.8rem;

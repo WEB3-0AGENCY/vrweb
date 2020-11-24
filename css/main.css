@@ -96,6 +96,12 @@ header {
   margin-top: 5rem;
 }
 
+@media screen and (max-width: 991px) {
+  header nav .button-demo {
+    visibility: hidden;
+  }
+}
+
 header nav .button-demo img {
   margin-left: 2rem;
 }
@@ -261,8 +267,16 @@ section .testimony .card {
   border-radius: 2rem;
 }
 
-section .testimony .card .card-inner {
-  padding: 6rem 7rem;
+@media screen and (max-width: 489px) {
+  section .testimony .card .card-inner {
+    padding: 2rem 2rem;
+  }
+}
+
+@media screen and (min-width: 489px) {
+  section .testimony .card .card-inner {
+    padding: 6rem 7rem;
+  }
 }
 
 section .testimony .card .card-body .card-text h3 {

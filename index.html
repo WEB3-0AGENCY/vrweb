@@ -7,10 +7,12 @@
   <!-- FONTAWESOME -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" />
   <!-- BOOTSTRAP -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <!-- ANIMATE JS -->
+  <link rel="stylesheet" href="/css/animate.min.css">
   <!-- CUSTOM CSS-->
   <link rel="stylesheet" href="./css/main.css" />
-  <title>Document</title>
+  <title>Data Warehouse Landing Page</title>
 </head>
 
 <body>
@@ -18,50 +20,56 @@
 
 
   <header id="about">
-    
-    
+ 
 
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <a style="width: 50px; height: 35px;" class="navbar-brand" href="#"><img class="img-fluid"
-            src="/images/logo.svg" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <div class="row ">
+        <div class="fixed-top container">
+        <nav class="col-12 navbar navbar-expand-lg navbar-light mt-5">
+          <a style="width: 50px; height: 35px;" class="navbar-brand" href="#"><img class="img-fluid"
+              src="/images/logo.svg" alt=""></a>
+          <button class="ml-auto navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 d-flex">
+              <li class="nav-item active">
+                <a class="nav-link" href="#about">About<span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#help">Help</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#feature">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#footer">Signup</a>
+              </li>
+            </ul>
+          </div>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#about">About <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#help">Help</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#feature">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#footer">Signup</a>
-            </li>
-          </ul>
-          <div>
+          <div class="text-right">
             <a class="button-demo shadow" href="#">Request Demo<img src="/images/arrow.svg" alt=""></a>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
+        
 
-      <div class="header-wrapper  d-none d-xl-block">
+      </div>
+
+      <div class="header-wrapper ">
         <div class="row">
-          <div class="col-12 col-lg-5">
-            <h1>Save your data storage here.</h1>
-            <p >Data Warehouse is a data storage area that has been
+          <div class="col-12 col-lg-6">
+            <h1 class="col-12">Save your data storage here.</h1>
+            <p class="col-9" >Data Warehouse is a data storage area that has been
               tested for security, so you can store your data here
               safely but not be afraid of being stolen by others.</p>
-            <a class="button-learn-more" href="#">Learn more</a>
+            <a class="button-learn-more d-none d-xl-block" href="#">Learn more</a>
           </div>
-          <div class="col-12 col-lg-7">
-            <img class="img-fluid" src="/images/header.png" alt="">
+          <div class="col-12 col-lg-6">
+            <img class="" src="/images/header.png" alt="">
           </div>
         </div>
       </div>
@@ -109,7 +117,7 @@
         </div>
         <div class="row">
           <div class="col-12 col-lg-6">
-            <div class="box-wrapper">
+            <div class="box-wrapper ">
               <div class="box1 mt-5 mx-auto d-flex justify-content-center align-items-center">
                 <div class="box-image">
                   <img class="img-fluid" style="width: 100rem;" src="/images/box-image-1.png" alt="">
@@ -385,7 +393,7 @@
             <div class="copyright">
               <p>© Datawarehouse™, 2020. All rights reserved.</p>
               <p>Company Registration Number: 21479524.</p>
-              <p>Coded by BurakCaglar</p>
+              <a href="https://github.com/BurakCaglar">Coded by BurakCaglar</a>
             </div>
             <a href="#"><img id="message" src="/images/message.svg" alt=""></a>
           </div>
@@ -398,6 +406,7 @@
 
   <script src="/js/jquery-3.5.1.slim.min.js"></script>
   <script src="/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/script.js"></script>
 </body>
 
 </html>

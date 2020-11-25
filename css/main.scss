@@ -20,6 +20,29 @@
     src: url('/fonts/Avenir-Heavy.ttf');
 }
 
+#about {
+    background: linear-gradient(#F6FAFD, #fff);
+}
+
+
+
+/* Navbar Scrool Down BG COLOR */
+
+.nav-colored {
+    background-color: rgba( #F6FAFD, .8);
+    padding: 2rem 2rem;
+    border-radius: 5rem;
+ }
+.nav-transparent { background-color: transparent;}
+
+.active a {
+    color: #F063B8 !important;
+}
+
+.collapsing {
+    text-align: right;
+    font-size: 1.2rem;
+}
 
 
 /* INHERIT */
@@ -62,12 +85,18 @@
     }
   }
 
-  @media (min-width: 1140px) {
+
+  @media (max-width: 1200px) {
+    html {
+        font-size: 9px;
+    }
+  }
+  
+  @media (min-width: 1300px) {
     html {
         font-size: 10px;
     }
   }
-  
 
 html {
     box-sizing: border-box;
@@ -111,16 +140,22 @@ p {
     color: #4B5D68;
 }
 
+
+
 header {
-    margin-top: 5rem;
+    
 
     nav {
+        
+        transition: all .5s;
+
         @media screen and (max-width: 991px) {
             .button-demo {
-                visibility: hidden;
+                display: none;
         }
           }
           .button-demo {
+              
             img {
                 margin-left: 2rem;
             }
@@ -130,8 +165,13 @@ header {
         .collapse {
             ul {
                 margin-left: 12.1rem;
-    
+                text-align: right;
+                
+                
+                
                 li {
+
+                    
                     a {
                         margin-right: 4rem;
                         font-size: 1.6rem;
@@ -140,7 +180,14 @@ header {
                         &:hover {
                             color: #F063B8 !important;
                         }
+
+                        @media screen and (max-width: 999px) {
+                            margin-right: -.7rem;
+                            
+                        }
                     }
+
+                    
                 }
            
             }
@@ -151,20 +198,33 @@ header {
         position: relative;
         h1 {
             font-size: 6.2rem;
-            
+            @media screen and (max-width: 991px) {
+                text-align: center;
+                font-size: 5.7rem;
+              }
             
         }
         p{
             font-size: 1.8rem;
             font-family: 'Avenir-Medium';
-            margin: 4rem 0;
+            margin: 3rem 0;
             position: absolute;
             z-index: 3;
+            color: #4B5D68;
+
+            @media screen and (max-width: 991px) {
+                position: relative;
+                text-align: center;
+              }
+
+              @media screen and (max-width: 1310px) {
+                margin-top: 0;
+              }
             
         }
 
         .button-learn-more {
-            padding: 1.6rem 3.7rem;
+            padding: 1.5rem 3.7rem;
             background-color: #9C69E2;
             border-radius: 50px;
             color: #fff;
@@ -174,17 +234,38 @@ header {
             transition: 0.5s;
             border: 2px solid transparent;
             position: absolute;
-            margin: 14rem 0;
+            margin: 18rem 0;
             &:hover {
                 background-color: #fff;
                 border: 2px solid #9C69E2;
                 color: #212353;
             }
+
+            @media screen and (max-width: 1310px) {
+                margin-top: 10rem;
+                padding: 1rem 3.7rem;
+                margin-left: 15rem;
+                
+              }
         }
 
         img {
             margin-top: 5rem;
+            margin-left: -23rem;
+            margin-bottom: -3rem;
             z-index: 2;
+            
+            @media screen and (max-width: 991px) {
+                display: none;
+              }
+
+              @media screen and (max-width: 1310px) {
+                max-width: 100%;
+                height: auto;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+              }
         }
     }
 
@@ -207,24 +288,28 @@ header {
             text-align: center;
         }
     }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    
+        
+    }
+
+   
   }
+
+
 
 
 section {
 
-    margin: 5rem 0;
+    margin: 9rem 0;
 
     .features {
 
-        .box-image {
-            margin-right: 3rem;
-        }
-        h2 {
-            font-family: Helvetica, sans-serif;
-            color: #212353;
-            font-size: 2.4rem;
-            font-weight: bold;
-        }
+    
         p {
             margin: 2rem 5rem 2rem 0;
             font-family: 'Avenir-Book';
@@ -232,29 +317,47 @@ section {
             font-size: 1.6rem;
         }
 
-        h4 {
-            font-family: 'Avenir-Heavy';
-            color: #212353;
+        .box-wrapper {
 
-        }
-
-        .box1 {
-            @extend %box;
-        }
-        
-        .box2 {
-            @extend %box;
-            background-color: rgba($color: #9C69E2, $alpha: .1)
-        }
-
-        .box3 {
-            @extend %box;
-            background-color: rgba($color: #F063B8, $alpha: .1)
-        }
-
-        .box4 {
-            @extend %box;
-            background-color: rgba($color: #2D9CDB, $alpha: .1)
+            &:hover {
+                transform: scale(1.05);
+            }
+            .box-image {
+                margin-right: 3rem;
+            }
+            h2 {
+                font-family: Helvetica, sans-serif;
+                color: #212353;
+                font-size: 2.4rem;
+                font-weight: bold;
+            }
+            
+    
+            h4 {
+                font-family: 'Avenir-Heavy';
+                color: #212353;
+    
+            }
+    
+            .box1 {
+                @extend %box;
+                
+            }
+            
+            .box2 {
+                @extend %box;
+                background-color: rgba($color: #9C69E2, $alpha: .1)
+            }
+    
+            .box3 {
+                @extend %box;
+                background-color: rgba($color: #F063B8, $alpha: .1)
+            }
+    
+            .box4 {
+                @extend %box;
+                background-color: rgba($color: #2D9CDB, $alpha: .1)
+            }
         }
         
 

@@ -188,13 +188,10 @@ header .header-wrapper p {
 @media screen and (max-width: 991px) {
   header .header-wrapper p {
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-  }
-}
-
-@media screen and (max-width: 1310px) {
-  header .header-wrapper p {
-    margin-top: 0;
+    margin-bottom: -5rem;
   }
 }
 

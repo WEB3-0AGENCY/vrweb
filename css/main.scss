@@ -1,655 +1,597 @@
+@import url("./components.css");
+@import url("./abstract.css");
 
-
+/* FONTS START */
 @font-face {
-    font-family: 'Avenir-Medium';
-    src: url('/fonts/AvenirLTStd-Medium.otf');
-}
-
-@font-face {
-    font-family: 'Avenir-Roman';
-    src: url('/fonts/AvenirLTStd-Roman.otf');
+  font-family: "Avenir-Medium";
+  src: url("/fonts/AvenirLTStd-Medium.otf");
 }
 
 @font-face {
-    font-family: 'Avenir-Book';
-    src: url('/fonts/AvenirLTStd-Book.otf');
+  font-family: "Avenir-Roman";
+  src: url("/fonts/AvenirLTStd-Roman.otf");
 }
 
 @font-face {
-    font-family: 'Avenir-Heavy';
-    src: url('/fonts/Avenir-Heavy.ttf');
+  font-family: "Avenir-Book";
+  src: url("/fonts/AvenirLTStd-Book.otf");
 }
 
-#about {
-    background: linear-gradient(#F6FAFD, #fff);
+@font-face {
+  font-family: "Avenir-Heavy";
+  src: url("/fonts/Avenir-Heavy.ttf");
 }
 
+/* FONTS END */
 
-
-/* Navbar Scrool Down BG COLOR */
-
-.nav-colored {
-    background-color: rgba( #F6FAFD, .8);
-    padding: 2rem 2rem;
-    border-radius: 5rem;
- }
-.nav-transparent { background-color: transparent;}
-
-.active a {
-    color: #F063B8 !important;
-}
-
-.collapsing {
-    text-align: right;
-    font-size: 1.2rem;
-}
-
-
-/* INHERIT */
-
-%box {
-    padding: 5rem 0rem 2rem 4rem;
-    
-    background-color: rgba($color:  #68C9BA, $alpha: .1);
-    border-radius: 5rem;
-    position: relative;
-    }
-
-    
-
-/* MIXIN */
-
-@mixin flex($flex, $rowOrColoumn, $justify-content, $align-items) {
-    display: $flex;
-    flex-direction: $rowOrColoumn;
-    justify-content: $justify-content;
-    align-items: $align-items;
-  }
-
-  @media (max-width: 570px) {
-    p {
-        font-size: 1.4rem;
-    }
-  }
-
-  @media (min-width: 50px) {
-    html {
-        font-size: 8px;
-    }
-  }
-
-
-  @media (min-width: 960px) {
-    html {
-        font-size: 9px;
-    }
-  }
-
-
-  @media (max-width: 1200px) {
-    html {
-        font-size: 9px;
-    }
-  }
-  
-  @media (min-width: 1300px) {
-    html {
-        font-size: 10px;
-    }
-  }
-
+/****************** GENERAL STARTING *******************/
 html {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    
-    
-}
-a:hover {
-    text-decoration: none;
-}
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
 
+  a:hover {
+    text-decoration: none;
+  }
 
-h1 {
+  /** HEADER GRADIENT **/
+  #about {
+    background: linear-gradient(#f6fafd, #fff);
+  }
+
+  /** HEADLINES AND FONTS **/
+
+  h1 {
     font-family: Helvetica, sans-serif;
     color: #212353;
     font-weight: bold;
     line-height: 130%;
     font-size: 4rem;
-}
+  }
 
-h3 {
+  h3 {
     font-size: 2rem;
-}
+  }
 
-h5 {
-    font-family: 'Avenir-Roman';
+  h5 {
+    font-family: "Avenir-Roman";
     font-size: 1.6rem;
     color: #212353;
     line-height: 3rem;
 
-    &:hover{
-        color: #F063B8;
+    &:hover {
+      color: #f063b8;
     }
+  }
+
+  p {
+    font-family: "Avenir-Medium";
+    color: #4b5d68;
+  }
 }
 
-p {
-    font-family: 'Avenir-Medium';
-    color: #4B5D68;
+/* FONT SIZE FOR RESPONSIVE */
+
+@media (max-width: 570px) {
+  p {
+    font-size: 1.4rem;
+  }
 }
 
+@media (min-width: 50px) {
+  html {
+    font-size: 8px;
+  }
+}
 
+@media (min-width: 960px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 1300px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+/* FONT SIZE FOR RESPONSIVE END */
+
+
+/*********** GENERAL END *************/
+
+
+
+/* MIXIN */
+
+@mixin flex($flex, $rowOrColoumn, $justify-content, $align-items) {
+  display: $flex;
+  flex-direction: $rowOrColoumn;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+/* MIXIN END */
+
+/* INHERIT FOR BOXES START **/
+
+%box {
+  padding: 5rem 0rem 2rem 4rem;
+  background-color: rgba($color: #68c9ba, $alpha: 0.1);
+  border-radius: 5rem;
+  position: relative;
+
+  @media (max-width: 575px) {
+    .box-text {
+      text-align: center;
+    }
+  }
+}
+
+/** INHERIT FOR BOXES END **/
+
+/* Navbar Scroll Down Background COLOR START */
+
+.nav-colored {
+  background-color: rgba(#f6fafd, 0.8);
+  padding: 2rem 2rem;
+  border-radius: 5rem !important;
+}
+.nav-transparent {
+  background-color: transparent;
+}
+
+/* Navbar Scroll Down Background COLOR END */
+
+/************** HEADER STARTING *************/
 
 header {
-    
-
-    nav {
-        
-        transition: all .5s;
-
-        @media screen and (max-width: 991px) {
-            .button-demo {
-                display: none;
-        }
-          }
-          .button-demo {
-              
-            img {
-                margin-left: 2rem;
-            }
+  .navbar {
+    text-align: right;
+    @media screen and (max-width: 999px) {
+      background-color: rgba(#f6fafd, 0.8);
+      border-radius: 1rem;
     }
-        
 
-        .collapse {
-            ul {
-                margin-left: 12.1rem;
-                text-align: right;
-                
-                
-                
-                li {
-
-                    
-                    a {
-                        margin-right: 4rem;
-                        font-size: 1.6rem;
-                        font-family: Avenir-Medium;
-                        color: #4B5D68;
-                        &:hover {
-                            color: #F063B8 !important;
-                        }
-
-                        @media screen and (max-width: 999px) {
-                            margin-right: -.7rem;
-                            
-                        }
-                    }
-
-                    
-                }
-           
-            }
-        }
+    .active a {
+      color: #f063b8 !important;
     }
-    .header-wrapper {
-        margin-top: 13rem;
-        position: relative;
-        h1 {
-            font-size: 6.2rem;
-            @media screen and (max-width: 991px) {
-                text-align: center;
-                font-size: 5.7rem;
-              }
-            
-        }
-        p{
-            font-size: 1.8rem;
-            font-family: 'Avenir-Medium';
-            margin: 3rem 0;
-            position: absolute;
-            z-index: 3;
-            color: #4B5D68;
 
-            @media screen and (max-width: 991px) {
-                position: relative;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
-                margin-bottom: -5rem;
-              }
+    .collapsing {
+      font-family: Avenir-Medium;
+      color: #4b5d68;
+      font-size: 1.6rem;
+    }
+  }
 
-              @media screen and (max-width: 1310px) {
-               
-              }
-            
-        }
+  nav {
+    transition: all 0.5s;
 
-        .button-learn-more {
-            padding: 1.5rem 3.7rem;
-            background-color: #9C69E2;
-            border-radius: 50px;
-            color: #fff;
+    @media screen and (max-width: 991px) {
+      .button-demo {
+        display: none;
+      }
+    }
+
+    .collapse {
+      ul {
+        li {
+          a {
+            @media screen and (min-width: 999px) {
+              margin-right: 4rem;
+              font-size: 1.6rem;
+            }
+
             font-size: 1.6rem;
-            font-family: Averin-Heavy;
-            font-weight: bold;
-            transition: 0.5s;
-            border: 2px solid transparent;
-            position: absolute;
-            margin: 18rem 0;
+            font-family: Avenir-Medium;
+            color: #4b5d68;
             &:hover {
-                background-color: #fff;
-                border: 2px solid #9C69E2;
-                color: #212353;
+              color: #f063b8 !important;
             }
-
-            @media screen and (max-width: 1310px) {
-                margin-top: 13rem;
-                padding: 1rem 3.7rem;
-                margin-left: 15rem;
-                
-              }
+          }
         }
-
-        img {
-            margin-top: 5rem;
-            margin-left: -23rem;
-            margin-bottom: -3rem;
-            z-index: 2;
-            
-            @media screen and (max-width: 991px) {
-                display: none;
-              }
-
-              @media screen and (max-width: 1310px) {
-                max-width: 100%;
-                height: auto;
-                margin-left: 0;
-                margin-right: 0;
-                margin-bottom: 0;
-              }
-        }
+      }
     }
-
-    
-}
-
-.wrapper-leveldata {
-    border-radius: 5rem;
-    padding: 2.5rem 0;
-    background-color: rgba(#F063B8, .15);
+  }
+  .header-wrapper {
+    margin-top: 13rem;
+    position: relative;
+    h1 {
+      font-size: 6.2rem;
+      @media screen and (max-width: 991px) {
+        text-align: center;
+        font-size: 5.7rem;
+      }
+    }
     p {
-        font-family: 'Avenir-Medium';
-        font-size: 1.8rem;
-    }
-}
+      font-size: 1.8rem;
+      font-family: "Avenir-Medium";
+      margin: 3rem 0;
+      position: absolute;
+      z-index: 3;
+      color: #4b5d68;
 
-@media screen and (max-width: 998px) {
-    .wrapper-leveldata {
-        h1, p {
-            text-align: center;
-        }
+      @media screen and (max-width: 991px) {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-bottom: -5rem;
+      }
+
+      @media screen and (max-width: 1310px) {
+      }
+    }
+
+    .button-learn-more {
+      background-color: #9c69e2;
+      position: absolute;
+      margin: 18rem 0;
+      &:hover {
+        background-color: #fff;
+        border: 2px solid #9c69e2;
+        color: #212353;
+      }
+
+      @media screen and (max-width: 1310px) {
+        margin-top: 13rem;
+        padding: 1rem 3.7rem;
+        margin-left: 15rem;
+      }
     }
 
     img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    
-        
+      margin-top: 5rem;
+      margin-left: -23rem;
+      margin-bottom: -3rem;
+      z-index: 2;
+
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+
+      @media screen and (max-width: 1310px) {
+        max-width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+      }
     }
-
-   
   }
+}
 
+/************** HEADER END ************/
 
-
+/*************** SECTIONS START ****************/
 
 section {
+  margin: 9rem 0;
 
-    margin: 9rem 0;
+  /** SECTION 1 START **/
 
-    .features {
+  .wrapper-leveldata {
+    border-radius: 5rem;
 
-    
-        p {
-            margin: 2rem 5rem 2rem 0;
-            font-family: 'Avenir-Book';
-            color: #4B5D68;
-            font-size: 1.6rem;
-        }
-
-        .box-wrapper {
-
-            &:hover {
-                transform: scale(1.05);
-            }
-            .box-image {
-                margin-right: 3rem;
-            }
-            h2 {
-                font-family: Helvetica, sans-serif;
-                color: #212353;
-                font-size: 2.4rem;
-                font-weight: bold;
-            }
-            
-    
-            h4 {
-                font-family: 'Avenir-Heavy';
-                color: #212353;
-    
-            }
-    
-            .box1 {
-                @extend %box;
-                
-            }
-            
-            .box2 {
-                @extend %box;
-                background-color: rgba($color: #9C69E2, $alpha: .1)
-            }
-    
-            .box3 {
-                @extend %box;
-                background-color: rgba($color: #F063B8, $alpha: .1)
-            }
-    
-            .box4 {
-                @extend %box;
-                background-color: rgba($color: #2D9CDB, $alpha: .1)
-            }
-        }
-        
-
-        
+    background-color: rgba(#f063b8, 0.15);
+    p {
+      font-family: "Avenir-Medium";
+      font-size: 1.8rem;
     }
 
-    .testimony {
+    @media screen and (max-width: 998px) {
+      h1,
+      p {
+        text-align: center;
+      }
+    }
+  }
 
-        
+  /** SECTION 1 END **/
 
-        .wrapper-testimony {
-            border-radius: 5rem;
-            padding: 8rem 0 13rem 0;
-            background-color: #9C69E2;
-            position: relative;
+  /** SECTION 2 START (FUTURE) **/
 
-            h1 {
-               font-family: Helvetica, sans-serif;
-               font-weight: bolder;
-               color: #fff;
-            }
-    
-            
-            @media screen and (min-width: 1200px) {
-                .carousel-indicators {
-                    bottom: -8rem;
-                    left: -5rem;
-                    right: auto;
-                    
-                  }
-                  
-                  .carousel-indicators li {
-                    width: .5rem;
-                    height: .5rem;
-                    border-radius: 100%;
-                  }
-                  
-                  .carousel-indicators li:not(:last-child) {
-                    margin-right: 20px;
-                  }
-    
-                  .carousel-control-prev {
-                    height: 5rem;
-                    width: 5rem;
-                    top: 37rem;
-                    left: 95rem;
-                    position: absolute;
-                  }
-    
-                  .carousel-control-next {
-                    height: 5rem;
-                    width: 5rem;
-                    top: 37rem;
-                    right: 4rem;
-                    position: absolute;
-                    
-                  }
-              }
-
-            
-              
-              
-              
-
-
-        }
-
-        .card {
-            border-radius: 2rem;
-            
-            @media screen and (max-width: 489px) {
-                .card-inner {
-                    padding: 2rem 2rem; 
-                }
-              }
-
-              @media screen and (min-width: 489px) {
-                .card-inner {
-                    padding: 6rem 7rem;  
-                }
-              }
-            
-
-            .card-body {
-                .card-text {
-                    h3 {
-                        font-family: 'Avenir-Heavy';
-                        font-size: 1.8rem;
-                        color: #212353;
-                    }
-                    h5 {
-                        font-family: 'Avenir-Medium';
-                        font-size: 1.4rem;
-                        color: #9C69E2;
-                    }
-                    
-                    p {
-                        font-family: 'Avenir-Roman';
-                        font-size: 1.8rem;
-                        color: #4B5D68;
-                    }
-                }
-                img {
-                    width: 8rem;
-                    height: 8rem;
-                }
-            }
-        }
+  .features {
+    p {
+      margin: 2rem 5rem 2rem 0;
+      font-family: "Avenir-Book";
+      color: #4b5d68;
+      font-size: 1.6rem;
     }
 
-    .section-4 {
+    .box-wrapper {
+      &:hover {
+        transform: scale(1.05);
+      }
 
-        @media screen and (max-width: 777px) {
-            .button-learn-more {
-              margin: auto;
-              padding: 1rem 2rem;
-            }
-            .button-demo {
-                margin: auto;
-                padding: 1rem 2rem;
-            }
-            h1 {
-                margin: auto;
-            }
-            p {
-                margin: auto;
-            }
+      h2 {
+        font-family: Helvetica, sans-serif;
+        color: #212353;
+        font-size: 2.4rem;
+        font-weight: bold;
+      }
+
+      h4 {
+        font-family: "Avenir-Heavy";
+        color: #212353;
+      }
+
+      .box1 {
+        @extend %box;
+      }
+
+      .box2 {
+        @extend %box;
+        background-color: rgba($color: #9c69e2, $alpha: 0.1);
+      }
+
+      .box3 {
+        @extend %box;
+        background-color: rgba($color: #f063b8, $alpha: 0.1);
+      }
+
+      .box4 {
+        @extend %box;
+        background-color: rgba($color: #2d9cdb, $alpha: 0.1);
+      }
+    }
+  }
+
+  /** SECTION 2 END (FUTURE) **/
+
+  /** SECTION 3 START (TESTIMONY) **/
+
+  .testimony {
+    .wrapper-testimony {
+      border-radius: 5rem;
+      padding: 8rem 0 13rem 0;
+      background-color: #9c69e2;
+      position: relative;
+
+      @media screen and (max-width: 998px) {
+        padding: 5rem 0;
+      }
+
+      h1 {
+        font-family: Helvetica, sans-serif;
+        font-weight: bolder;
+        color: #fff;
+      }
+
+      @media screen and (min-width: 1200px) {
+        .carousel-indicators {
+          bottom: -8rem;
+          left: -5rem;
+          right: auto;
+        }
+
+        .carousel-indicators li {
+          width: 0.5rem;
+          height: 0.5rem;
+          border-radius: 100%;
+        }
+
+        .carousel-indicators li:not(:last-child) {
+          margin-right: 20px;
+        }
+
+        .carousel-control-prev {
+          height: 5rem;
+          width: 5rem;
+          top: 37rem;
+          left: 95rem;
+          position: absolute;
+        }
+
+        .carousel-control-next {
+          height: 5rem;
+          width: 5rem;
+          top: 37rem;
+          right: 4rem;
+          position: absolute;
+        }
+      }
+    }
+    .threeIndicators {
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
+    }
+
+    .card {
+      border-radius: 2rem;
+
+      @media screen and (max-width: 489px) {
+        .card-inner {
+          padding: 2rem 2rem;
+        }
+      }
+
+      @media screen and (min-width: 489px) {
+        .card-inner {
+          padding: 6rem 7rem;
+        }
+      }
+
+      .card-body {
+        .card-text {
+          h3 {
+            font-family: "Avenir-Heavy";
+            font-size: 1.8rem;
+            color: #212353;
+          }
+          h5 {
+            font-family: "Avenir-Medium";
+            font-size: 1.4rem;
+            color: #9c69e2;
           }
 
-        border-top: .1rem solid rgba($color: #4B5D68, $alpha: 0.3);
-        padding-top: 10rem;
-
-
-        h1 {
-            font-family: Helvetica, sans-serif;
-            font-size: 5rem;
-            font-weight: bold;
+          p {
+            font-family: "Avenir-Roman";
+            font-size: 1.8rem;
+            color: #4b5d68;
+          }
         }
-
-        p {
-            font-family: Avenir-Medium;
-            font-size: 18px;
+        img {
+          width: 8rem;
+          height: 8rem;
         }
-    
-        .button-demo {
-                img {
-                    margin-left: 2rem;
-                }
-        }
-        .button-learn-more {
-            margin-right: 2rem;
-        }
+      }
     }
-    
+  }
+
+  /** SECTION 3 END (TESTIMONY) **/
+
+  /** SECTION 4 START (TRY FOR FREE SECTION AND BUTTONS) **/
+
+  .section-4 {
+    border-top: 0.1rem solid rgba($color: #4b5d68, $alpha: 0.3);
+    padding-top: 10rem;
+
+    @media screen and (max-width: 777px) {
+      .button-learn-more {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+      }
+      .button-demo {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+      }
+      h1 {
+        margin: auto;
+      }
+      p {
+        margin: auto;
+      }
     }
 
+    h1 {
+      font-family: Helvetica, sans-serif;
+      font-size: 5rem;
+      font-weight: bold;
+    }
 
-    
+    p {
+      font-family: Avenir-Medium;
+      font-size: 18px;
+    }
+
+    .button-demo {
+      img {
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  /** SECTION 4 END (TRY FOR FREE SECTION AND BUTTONS) **/
+}
+
+
+
+/******************* SECTIONS END *****************/
+
+
+
+
+/************* FOOTER START **************/
 
 footer {
-    .info {
-        
-        @media only screen and (min-width: 430px) {
-            .adress {
-                margin-top: 3rem;
-                margin-bottom: 2rem;
-                
-            }
-            
-          }
-          .adress {
-            p {
-                font-size: 1.6rem;
-                font-family: 'Avenir-Medium';
-                color: #212353;
-                letter-spacing: .5px;
-                line-height: 1.8rem;
-            }
-        }
-
-        .contact {
-            p {
-                font-size: 1.6rem;
-                font-family: 'Avenir-Book';
-                color: #212353;
-                letter-spacing: .5px;
-                line-height: 1.8rem;
-            }
-        }
-
-        
+  .info {
+    @media only screen and (min-width: 430px) {
+      .adress {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+      }
     }
-    
-    h3 {
-        align-self: center;
-        font-family: 'Avenir-Roman';
+
+    .adress {
+      p {
         font-size: 1.6rem;
-        font-weight: bold;
+        font-family: "Avenir-Medium";
+        color: #212353;
+        letter-spacing: 0.5px;
+        line-height: 1.8rem;
+      }
     }
 
-    
-
-    
-    .footer-end {
-        margin: 5rem 0;
-        @include flex(flex, row, space-between, center);
-      
-    } 
-
-    .social-media-accounts {
-
-        i {
-            margin-right: 1.7rem;
-            font-size: 5rem;
-            
-        }
-
-        #facebook {
-            &:hover {
-                color: #3b5998;
-                cursor: pointer;
-            }
-        }
-        #twitter {
-            &:hover {
-                color: #1DA1F2;
-                cursor: pointer;
-            }
-        }
-        #instagram {
-            &:hover {
-                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                cursor: pointer;
-            }
-        }
-            
+    .contact {
+      p {
+        font-size: 1.6rem;
+        font-family: "Avenir-Book";
+        color: #212353;
+        letter-spacing: 0.5px;
+        line-height: 1.8rem;
+      }
     }
+  }
 
-
-    .copyright {
-       
-        p {
-        font-size: 1.2rem;
-        font-family: 'Avenir-Book';
-    }
-
- }
- 
-}
-
-
-/** BUTTONS **/
-
-.button-learn-more {
-    padding: 1.6rem 3.7rem;
-    background-color: #F063B8;
-    border-radius: 50px;
-    color: #fff;
+  h3 {
+    align-self: center;
+    font-family: "Avenir-Roman";
     font-size: 1.6rem;
-    font-family: Averin-Heavy;
     font-weight: bold;
-    transition: 0.5s;
-    border: 2px solid transparent;
-    &:hover {
-        background-color: #fff;
-        border: 2px solid #F063B8;
+  }
+
+  .footer-end {
+    margin: 5rem 0;
+    @include flex(flex, row, space-between, center);
+  }
+
+  .social-media-accounts {
+    i {
+      margin-right: 1.7rem;
+      font-size: 5rem;
     }
+
+    #facebook {
+      &:hover {
+        color: #3b5998;
+        cursor: pointer;
+      }
+    }
+    #twitter {
+      &:hover {
+        color: #1da1f2;
+        cursor: pointer;
+      }
+    }
+    #instagram {
+      &:hover {
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .copyright {
+    p {
+      font-size: 1.2rem;
+      font-family: "Avenir-Book";
+    }
+  }
 }
 
-.button-demo {
-    padding: 1.7rem 2rem 1.7rem 2.9rem;
-    background-color: #fff;
-    border-radius: 50px;
-    color: #212353;
-    font-size: 1.6rem;
-    font-family: Averin-Heavy;
-    font-weight: bold;
-    transition: 0.5s;
-
-    &:hover {
-        background-color: #F063B8;
-        color: #fff;   
-    }
-}
-
-
-
-
-    
+/*************** FOOTER END ******************/

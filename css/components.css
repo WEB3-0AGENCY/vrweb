@@ -1,1 +1,42 @@
-/* No CSS *//*# sourceMappingURL=components.css.map */
+/** BUTTONS START **/
+.button-learn-more {
+  padding: 1.6rem 3.7rem;
+  background-color: #F063B8;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: Averin-Heavy;
+  font-weight: bold;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 2px solid transparent;
+}
+
+.button-learn-more:hover {
+  background-color: #fff;
+  border: 2px solid #F063B8;
+}
+
+.button-demo {
+  padding: 1.7rem 2rem 1.7rem 2.9rem;
+  background-color: #fff;
+  border-radius: 50px;
+  color: #212353;
+  font-size: 1.6rem;
+  font-family: Averin-Heavy;
+  font-weight: bold;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.button-demo:hover {
+  background-color: #F063B8;
+  color: #fff;
+}
+
+.button-demo img {
+  margin-left: 2rem;
+}
+
+/** BUTTONS END **/
+/*# sourceMappingURL=components.css.map */

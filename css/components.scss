@@ -1,2 +1,41 @@
+/** BUTTONS START **/
+
+.button-learn-more {
+    padding: 1.6rem 3.7rem;
+    background-color: #F063B8;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: Averin-Heavy;
+    font-weight: bold;
+    transition: 0.5s;
+    border: 2px solid transparent;
+    &:hover {
+        background-color: #fff;
+        border: 2px solid #F063B8;
+    }
+}
+
+.button-demo {
+    padding: 1.7rem 2rem 1.7rem 2.9rem;
+    background-color: #fff;
+    border-radius: 50px;
+    color: #212353;
+    font-size: 1.6rem;
+    font-family: Averin-Heavy;
+    font-weight: bold;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: #F063B8;
+        color: #fff;   
+    }
+
+    img {
+        margin-left: 2rem;
+    }
+}
+
+/** BUTTONS END **/
 
 

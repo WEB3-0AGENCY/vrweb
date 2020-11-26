@@ -13,7 +13,7 @@ navLinks.forEach((item) => {
   item.addEventListener("click", handleClick);
 });
 
-/* NAVBAR COLOR IF ACTIVE */
+/* NAVBAR COLOR IF SCROLL DOWNS */
 var navBar = document.querySelector('.navbar');
 window.onscroll = function () { 
     "use strict";

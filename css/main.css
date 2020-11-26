@@ -1,57 +1,77 @@
+@import url("./components.css");
+@import url("./abstract.css");
+/* FONTS START */
 @font-face {
-  font-family: 'Avenir-Medium';
+  font-family: "Avenir-Medium";
   src: url("/fonts/AvenirLTStd-Medium.otf");
 }
 
 @font-face {
-  font-family: 'Avenir-Roman';
+  font-family: "Avenir-Roman";
   src: url("/fonts/AvenirLTStd-Roman.otf");
 }
 
 @font-face {
-  font-family: 'Avenir-Book';
+  font-family: "Avenir-Book";
   src: url("/fonts/AvenirLTStd-Book.otf");
 }
 
 @font-face {
-  font-family: 'Avenir-Heavy';
+  font-family: "Avenir-Heavy";
   src: url("/fonts/Avenir-Heavy.ttf");
 }
 
-#about {
-  background: -webkit-gradient(linear, left top, left bottom, from(#F6FAFD), to(#fff));
-  background: linear-gradient(#F6FAFD, #fff);
+/* FONTS END */
+/****************** GENERAL STARTING *******************/
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  /** HEADER GRADIENT **/
+  /** HEADLINES AND FONTS **/
 }
 
-/* Navbar Scrool Down BG COLOR */
-.nav-colored {
-  background-color: rgba(246, 250, 253, 0.8);
-  padding: 2rem 2rem;
-  border-radius: 5rem;
+html a:hover {
+  text-decoration: none;
 }
 
-.nav-transparent {
-  background-color: transparent;
+html #about {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f6fafd), to(#fff));
+  background: linear-gradient(#f6fafd, #fff);
 }
 
-.active a {
-  color: #F063B8 !important;
+html h1 {
+  font-family: Helvetica, sans-serif;
+  color: #212353;
+  font-weight: bold;
+  line-height: 130%;
+  font-size: 4rem;
 }
 
-.collapsing {
-  text-align: right;
-  font-size: 1.2rem;
+html h3 {
+  font-size: 2rem;
 }
 
-/* INHERIT */
-section .features .box-wrapper .box1, section .features .box-wrapper .box2, section .features .box-wrapper .box3, section .features .box-wrapper .box4 {
-  padding: 5rem 0rem 2rem 4rem;
-  background-color: rgba(104, 201, 186, 0.1);
-  border-radius: 5rem;
-  position: relative;
+html h5 {
+  font-family: "Avenir-Roman";
+  font-size: 1.6rem;
+  color: #212353;
+  line-height: 3rem;
 }
 
-/* MIXIN */
+html h5:hover {
+  color: #f063b8;
+}
+
+html p {
+  font-family: "Avenir-Medium";
+  color: #4b5d68;
+}
+
+/* FONT SIZE FOR RESPONSIVE */
 @media (max-width: 570px) {
   p {
     font-size: 1.4rem;
@@ -82,50 +102,62 @@ section .features .box-wrapper .box1, section .features .box-wrapper .box2, sect
   }
 }
 
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
+/* FONT SIZE FOR RESPONSIVE END */
+/*********** GENERAL END *************/
+/* MIXIN */
+/* MIXIN END */
+/* INHERIT FOR BOXES START **/
+section .features .box-wrapper .box1, section .features .box-wrapper .box2, section .features .box-wrapper .box3, section .features .box-wrapper .box4 {
+  padding: 5rem 0rem 2rem 4rem;
+  background-color: rgba(104, 201, 186, 0.1);
+  border-radius: 5rem;
+  position: relative;
 }
 
-a:hover {
-  text-decoration: none;
+@media (max-width: 575px) {
+  section .features .box-wrapper .box1 .box-text, section .features .box-wrapper .box2 .box-text, section .features .box-wrapper .box3 .box-text, section .features .box-wrapper .box4 .box-text {
+    text-align: center;
+  }
 }
 
-h1 {
-  font-family: Helvetica, sans-serif;
-  color: #212353;
-  font-weight: bold;
-  line-height: 130%;
-  font-size: 4rem;
+/** INHERIT FOR BOXES END **/
+/* Navbar Scroll Down Background COLOR START */
+.nav-colored {
+  background-color: rgba(246, 250, 253, 0.8);
+  padding: 2rem 2rem;
+  border-radius: 5rem !important;
 }
 
-h3 {
-  font-size: 2rem;
+.nav-transparent {
+  background-color: transparent;
 }
 
-h5 {
-  font-family: 'Avenir-Roman';
+/* Navbar Scroll Down Background COLOR END */
+/************** HEADER STARTING *************/
+header .navbar {
+  text-align: right;
+}
+
+@media screen and (max-width: 999px) {
+  header .navbar {
+    background-color: rgba(246, 250, 253, 0.8);
+    border-radius: 1rem;
+  }
+}
+
+header .navbar .active a {
+  color: #f063b8 !important;
+}
+
+header .navbar .collapsing {
+  font-family: Avenir-Medium;
+  color: #4b5d68;
   font-size: 1.6rem;
-  color: #212353;
-  line-height: 3rem;
-}
-
-h5:hover {
-  color: #F063B8;
-}
-
-p {
-  font-family: 'Avenir-Medium';
-  color: #4B5D68;
 }
 
 header nav {
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 @media screen and (max-width: 991px) {
@@ -134,30 +166,21 @@ header nav {
   }
 }
 
-header nav .button-demo img {
-  margin-left: 2rem;
-}
-
-header nav .collapse ul {
-  margin-left: 12.1rem;
-  text-align: right;
-}
-
 header nav .collapse ul li a {
-  margin-right: 4rem;
   font-size: 1.6rem;
   font-family: Avenir-Medium;
-  color: #4B5D68;
+  color: #4b5d68;
+}
+
+@media screen and (min-width: 999px) {
+  header nav .collapse ul li a {
+    margin-right: 4rem;
+    font-size: 1.6rem;
+  }
 }
 
 header nav .collapse ul li a:hover {
-  color: #F063B8 !important;
-}
-
-@media screen and (max-width: 999px) {
-  header nav .collapse ul li a {
-    margin-right: -.7rem;
-  }
+  color: #f063b8 !important;
 }
 
 header .header-wrapper {
@@ -178,11 +201,11 @@ header .header-wrapper h1 {
 
 header .header-wrapper p {
   font-size: 1.8rem;
-  font-family: 'Avenir-Medium';
+  font-family: "Avenir-Medium";
   margin: 3rem 0;
   position: absolute;
   z-index: 3;
-  color: #4B5D68;
+  color: #4b5d68;
 }
 
 @media screen and (max-width: 991px) {
@@ -196,23 +219,14 @@ header .header-wrapper p {
 }
 
 header .header-wrapper .button-learn-more {
-  padding: 1.5rem 3.7rem;
-  background-color: #9C69E2;
-  border-radius: 50px;
-  color: #fff;
-  font-size: 1.6rem;
-  font-family: Averin-Heavy;
-  font-weight: bold;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  border: 2px solid transparent;
+  background-color: #9c69e2;
   position: absolute;
   margin: 18rem 0;
 }
 
 header .header-wrapper .button-learn-more:hover {
   background-color: #fff;
-  border: 2px solid #9C69E2;
+  border: 2px solid #9c69e2;
   color: #212353;
 }
 
@@ -247,46 +261,47 @@ header .header-wrapper img {
   }
 }
 
-.wrapper-leveldata {
+/************** HEADER END ************/
+/*************** SECTIONS START ****************/
+section {
+  margin: 9rem 0;
+  /** SECTION 1 START **/
+  /** SECTION 1 END **/
+  /** SECTION 2 START (FUTURE) **/
+  /** SECTION 2 END (FUTURE) **/
+  /** SECTION 3 START (TESTIMONY) **/
+  /** SECTION 3 END (TESTIMONY) **/
+  /** SECTION 4 START (TRY FOR FREE SECTION AND BUTTONS) **/
+  /** SECTION 4 END (TRY FOR FREE SECTION AND BUTTONS) **/
+}
+
+section .wrapper-leveldata {
   border-radius: 5rem;
-  padding: 2.5rem 0;
   background-color: rgba(240, 99, 184, 0.15);
 }
 
-.wrapper-leveldata p {
-  font-family: 'Avenir-Medium';
+section .wrapper-leveldata p {
+  font-family: "Avenir-Medium";
   font-size: 1.8rem;
 }
 
 @media screen and (max-width: 998px) {
-  .wrapper-leveldata h1, .wrapper-leveldata p {
+  section .wrapper-leveldata h1,
+  section .wrapper-leveldata p {
     text-align: center;
   }
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-section {
-  margin: 9rem 0;
 }
 
 section .features p {
   margin: 2rem 5rem 2rem 0;
-  font-family: 'Avenir-Book';
-  color: #4B5D68;
+  font-family: "Avenir-Book";
+  color: #4b5d68;
   font-size: 1.6rem;
 }
 
 section .features .box-wrapper:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-}
-
-section .features .box-wrapper .box-image {
-  margin-right: 3rem;
 }
 
 section .features .box-wrapper h2 {
@@ -297,7 +312,7 @@ section .features .box-wrapper h2 {
 }
 
 section .features .box-wrapper h4 {
-  font-family: 'Avenir-Heavy';
+  font-family: "Avenir-Heavy";
   color: #212353;
 }
 
@@ -316,8 +331,14 @@ section .features .box-wrapper .box4 {
 section .testimony .wrapper-testimony {
   border-radius: 5rem;
   padding: 8rem 0 13rem 0;
-  background-color: #9C69E2;
+  background-color: #9c69e2;
   position: relative;
+}
+
+@media screen and (max-width: 998px) {
+  section .testimony .wrapper-testimony {
+    padding: 5rem 0;
+  }
 }
 
 section .testimony .wrapper-testimony h1 {
@@ -333,8 +354,8 @@ section .testimony .wrapper-testimony h1 {
     right: auto;
   }
   section .testimony .wrapper-testimony .carousel-indicators li {
-    width: .5rem;
-    height: .5rem;
+    width: 0.5rem;
+    height: 0.5rem;
     border-radius: 100%;
   }
   section .testimony .wrapper-testimony .carousel-indicators li:not(:last-child) {
@@ -356,6 +377,12 @@ section .testimony .wrapper-testimony h1 {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  section .testimony .threeIndicators {
+    display: none;
+  }
+}
+
 section .testimony .card {
   border-radius: 2rem;
 }
@@ -373,21 +400,21 @@ section .testimony .card {
 }
 
 section .testimony .card .card-body .card-text h3 {
-  font-family: 'Avenir-Heavy';
+  font-family: "Avenir-Heavy";
   font-size: 1.8rem;
   color: #212353;
 }
 
 section .testimony .card .card-body .card-text h5 {
-  font-family: 'Avenir-Medium';
+  font-family: "Avenir-Medium";
   font-size: 1.4rem;
-  color: #9C69E2;
+  color: #9c69e2;
 }
 
 section .testimony .card .card-body .card-text p {
-  font-family: 'Avenir-Roman';
+  font-family: "Avenir-Roman";
   font-size: 1.8rem;
-  color: #4B5D68;
+  color: #4b5d68;
 }
 
 section .testimony .card .card-body img {
@@ -402,11 +429,15 @@ section .section-4 {
 
 @media screen and (max-width: 777px) {
   section .section-4 .button-learn-more {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
     padding: 1rem 2rem;
   }
   section .section-4 .button-demo {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
     padding: 1rem 2rem;
   }
   section .section-4 h1 {
@@ -432,10 +463,8 @@ section .section-4 .button-demo img {
   margin-left: 2rem;
 }
 
-section .section-4 .button-learn-more {
-  margin-right: 2rem;
-}
-
+/******************* SECTIONS END *****************/
+/************* FOOTER START **************/
 @media only screen and (min-width: 430px) {
   footer .info .adress {
     margin-top: 3rem;
@@ -445,17 +474,17 @@ section .section-4 .button-learn-more {
 
 footer .info .adress p {
   font-size: 1.6rem;
-  font-family: 'Avenir-Medium';
+  font-family: "Avenir-Medium";
   color: #212353;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   line-height: 1.8rem;
 }
 
 footer .info .contact p {
   font-size: 1.6rem;
-  font-family: 'Avenir-Book';
+  font-family: "Avenir-Book";
   color: #212353;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   line-height: 1.8rem;
 }
 
@@ -463,7 +492,7 @@ footer h3 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  font-family: 'Avenir-Roman';
+  font-family: "Avenir-Roman";
   font-size: 1.6rem;
   font-weight: bold;
 }
@@ -496,12 +525,12 @@ footer .social-media-accounts #facebook:hover {
 }
 
 footer .social-media-accounts #twitter:hover {
-  color: #1DA1F2;
+  color: #1da1f2;
   cursor: pointer;
 }
 
 footer .social-media-accounts #instagram:hover {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -510,42 +539,8 @@ footer .social-media-accounts #instagram:hover {
 
 footer .copyright p {
   font-size: 1.2rem;
-  font-family: 'Avenir-Book';
+  font-family: "Avenir-Book";
 }
 
-/** BUTTONS **/
-.button-learn-more {
-  padding: 1.6rem 3.7rem;
-  background-color: #F063B8;
-  border-radius: 50px;
-  color: #fff;
-  font-size: 1.6rem;
-  font-family: Averin-Heavy;
-  font-weight: bold;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  border: 2px solid transparent;
-}
-
-.button-learn-more:hover {
-  background-color: #fff;
-  border: 2px solid #F063B8;
-}
-
-.button-demo {
-  padding: 1.7rem 2rem 1.7rem 2.9rem;
-  background-color: #fff;
-  border-radius: 50px;
-  color: #212353;
-  font-size: 1.6rem;
-  font-family: Averin-Heavy;
-  font-weight: bold;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.button-demo:hover {
-  background-color: #F063B8;
-  color: #fff;
-}
+/*************** FOOTER END ******************/
 /*# sourceMappingURL=main.css.map */

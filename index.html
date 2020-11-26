@@ -5,23 +5,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- FONTAWESOME -->
+  <!-- PRELOAD FOR FONTS -->
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" />
+  <link rel="preload" href="./fonts/Avenir-Heavy.ttf" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="./fonts/AvenirLTStd-Book.otf" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="./fonts/AvenirLTStd-Medium.otf" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="./fonts/AvenirLTStd-Roman.otf" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="./fonts/Helvetica-Bold.ttf" as="font" crossorigin="anonymous" />
+
+  <!-- FAVICON -->
+
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+
+  <!-- FONT AWESOME -->
+
+  <link rel="stylesheet" href="./css/all.min.css" />
 
   <!-- BOOTSTRAP -->
 
   <link rel="stylesheet" href="./css/bootstrap.min.css" />
 
   <!-- CUSTOM CSS-->
-  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="preload" href="/css/main.css" as="style" onload="this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="/css/main.css" /></noscript>
 
   <title>Data Warehouse Landing Page</title>
-
 </head>
 
 <body>
-
   <!-- HEADER AND NAVBAR START -->
 
   <header id="about">
@@ -62,11 +74,13 @@
       <div class="header-wrapper">
         <div class="row">
           <div class="col-12 col-lg-6">
-            <h1 class="col-12"> <span class="ani-headlink">Save</span>
+            <h1 class="col-12">
+              <span class="ani-headlink">Save</span>
               <span class="ani-headlink">your</span>
               <span class="ani-headlink">data</span>
               <span class="ani-headlink">storage</span>
-              <span class="ani-headlink">here.</span> </h1>
+              <span class="ani-headlink">here.</span>
+            </h1>
             <p class="col-9">
               Data Warehouse is a data storage area that has been tested for
               security, so you can store your data here safely but not be
@@ -340,9 +354,14 @@
         <div class="row">
           <div class="col-12 col-md-4">
             <div class="row">
-              <h1><span class="ani-free">Try</span> <span class="ani-free">for</span> <span style="color: #9C69E2;"
-                  class="ani-free">free!</span></h1>
-              <p class="ani-oneWeekFree">Get limited 1 week free try our features!</p>
+              <h1>
+                <span class="ani-free">Try</span>
+                <span class="ani-free">for</span>
+                <span style="color: #9c69e2" class="ani-free">free!</span>
+              </h1>
+              <p class="ani-oneWeekFree">
+                Get limited 1 week free try our features!
+              </p>
             </div>
           </div>
           <div class="col-12 offset-md-4 col-md-4 my-auto ani-oneWeekFree">
@@ -428,9 +447,9 @@
         </div>
 
         <div class="col-3 col-sm-3 social-media-accounts">
-          <i id="facebook" class="fab fa-facebook-square"></i>
-          <i id="twitter" class="fab fa-twitter-square"></i>
-          <i id="instagram" class="fab fa-instagram-square"></i>
+          <a href="#"><i id="facebook" class="fab fa-facebook-square"></i></a>
+          <a href="#"><i id="twitter" class="fab fa-twitter-square"></i></a>
+          <a href="#"><i id="instagram" class="fab fa-instagram-square"></i></a>
         </div>
       </div>
 
@@ -455,16 +474,11 @@
 
   <script src="./js/jquery-3.5.1.slim.min.js"></script>
 
-  <!-- BOOTSTRAP MIN JS -->
-
-  <script src="./js/bootstrap.bundle.min.js"></script>
-
   <!--  SCROLL REVEAL JS -->
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="./js/scrollreveal.js"></script>
 
   <!-- CUSTOM JS -->
   <script src="./js/script.js"></script>
-
 </body>
 
 </html>

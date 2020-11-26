@@ -262,6 +262,8 @@ header .header-wrapper #header-photo {
 
 @media screen and (max-width: 991px) {
   header .header-wrapper #header-photo {
+    width: 0px;
+    height: 0px;
     display: none;
   }
 }

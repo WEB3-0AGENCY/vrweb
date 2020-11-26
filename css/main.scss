@@ -260,17 +260,18 @@ header {
       margin-bottom: -3rem;
       z-index: 2;
 
-      @media screen and (max-width: 991px) {
-        display: none;
-      }
-
-      @media screen and (max-width: 1310px) {
+      @media screen and (min-device-width: 991px) and (max-width: 1310px) {
         max-width: 100%;
         height: auto;
         margin-left: 0;
         margin-right: 0;
         margin-bottom: 0;
       }
+
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+
     }
   }
 }

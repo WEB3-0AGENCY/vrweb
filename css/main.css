@@ -3,21 +3,25 @@
 /* FONTS START */
 @font-face {
   font-family: "Avenir-Medium";
+  font-display: swap;
   src: url("/fonts/AvenirLTStd-Medium.otf");
 }
 
 @font-face {
   font-family: "Avenir-Roman";
+  font-display: swap;
   src: url("/fonts/AvenirLTStd-Roman.otf");
 }
 
 @font-face {
   font-family: "Avenir-Book";
+  font-display: swap;
   src: url("/fonts/AvenirLTStd-Book.otf");
 }
 
 @font-face {
   font-family: "Avenir-Heavy";
+  font-display: swap;
   src: url("/fonts/Avenir-Heavy.ttf");
 }
 
@@ -519,6 +523,9 @@ footer .footer-end {
 footer .social-media-accounts i {
   margin-right: 1.7rem;
   font-size: 5rem;
+  color: #5c6a75;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 footer .social-media-accounts #facebook:hover {
@@ -532,10 +539,7 @@ footer .social-media-accounts #twitter:hover {
 }
 
 footer .social-media-accounts #instagram:hover {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #FC574B;
   cursor: pointer;
 }
 

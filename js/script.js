@@ -67,7 +67,7 @@ ScrollReveal().reveal('.ani-delay', {
 });
 
 ScrollReveal().reveal('.ani-delay2', {
-  delay: 800
+  delay: 1000
 });
 
 ScrollReveal().reveal('.ani-free', {

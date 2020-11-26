@@ -84,7 +84,7 @@ ScrollReveal().reveal('.ani-headlink', {
 });
 
 ScrollReveal().reveal('.ani-oneWeekFree', {
-  delay: 500,
+  delay: 1750,
   duration: 2000,
   interval: 750,
   scale: .8
@@ -93,10 +93,16 @@ ScrollReveal().reveal('.ani-oneWeekFree', {
 ScrollReveal().reveal('.ani-scale', {
   duration: 1200,
   scale: .4,
-  delay: 500,
+  delay: 100,
 });
 
 ScrollReveal().reveal('.interval', {
+  duration: 1200,
+  interval: 700
+});
+
+ScrollReveal().reveal('.interval2', {
+  delay: 1500,
   duration: 1200,
   interval: 700
 });

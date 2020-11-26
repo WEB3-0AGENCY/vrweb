@@ -186,6 +186,8 @@ header nav .collapse ul li a:hover {
 header .header-wrapper {
   margin-top: 13rem;
   position: relative;
+  -webkit-transition: all 2s;
+  transition: all 2s;
 }
 
 header .header-wrapper h1 {
@@ -227,7 +229,7 @@ header .header-wrapper .button-learn-more {
 header .header-wrapper .button-learn-more:hover {
   background-color: #fff;
   border: 2px solid #9c69e2;
-  color: #212353;
+  color: #9c69e2;
 }
 
 @media screen and (max-width: 1310px) {
@@ -459,8 +461,8 @@ section .section-4 p {
   font-size: 18px;
 }
 
-section .section-4 .button-demo img {
-  margin-left: 2rem;
+section .section-4 .button-demo:hover {
+  background-color: #9C69E2;
 }
 
 /******************* SECTIONS END *****************/

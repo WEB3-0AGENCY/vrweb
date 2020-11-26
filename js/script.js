@@ -1,4 +1,4 @@
-/* IS NAVBAR ITEM ACTIVE? */
+/* IS NAVBAR ITEM ACTIVE? START */
 
 const navLinks = document.querySelectorAll(".nav-item");
 
@@ -13,7 +13,9 @@ navLinks.forEach((item) => {
   item.addEventListener("click", handleClick);
 });
 
-/* NAVBAR COLOR IF SCROLL DOWNS */
+/* IS NAVBAR ITEM ACTIVE? END */
+
+/* NAVBAR COLOR IF SCROLL DOWNS START */
 var navBar = document.querySelector('.navbar');
 window.onscroll = function () { 
     "use strict";
@@ -29,8 +31,10 @@ window.onscroll = function () {
     }
 };
 
+/* NAVBAR COLOR IF SCROLL DOWNS END */
 
-/* SCROLL REVEAL ANIMATIONS */
+
+/* SCROLL REVEAL ANIMATIONS START */
 
 window.scale = new ScrollReveal();
 
@@ -92,4 +96,4 @@ ScrollReveal().reveal('.ani-scale', {
   interval: 700
 });
 
-
+/* SCROLL REVEAL ANIMATIONS END */

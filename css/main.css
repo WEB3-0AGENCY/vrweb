@@ -243,7 +243,7 @@ header .header-wrapper .button-learn-more:hover {
   }
 }
 
-header .header-wrapper img {
+header .header-wrapper #header-photo {
   margin-top: 5rem;
   margin-left: -23rem;
   margin-bottom: -3rem;
@@ -251,7 +251,7 @@ header .header-wrapper img {
 }
 
 @media screen and (min-device-width: 991px) and (max-width: 1310px) {
-  header .header-wrapper img {
+  header .header-wrapper #header-photo {
     max-width: 100%;
     height: auto;
     margin-left: 0;
@@ -261,7 +261,7 @@ header .header-wrapper img {
 }
 
 @media screen and (max-width: 991px) {
-  header .header-wrapper img {
+  header .header-wrapper #header-photo {
     display: none;
   }
 }

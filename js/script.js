@@ -1,21 +1,3 @@
-/** JS NO SCRIPT START **/
-
-var loadDeferredStyles = function() {
-  var addStylesNode = document.getElementById("deferred-styles");
-  var replacement = document.createElement("div");
-  replacement.innerHTML = addStylesNode.textContent;
-  document.body.appendChild(replacement)
-  addStylesNode.parentElement.removeChild(addStylesNode);
-};
-var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-  webkitRequestAnimationFrame || msRequestAnimationFrame;
-if (raf) raf(function() {
-  window.setTimeout(loadDeferredStyles, 0);
-});
-else window.addEventListener('load', loadDeferredStyles);
-
-/** JS NO SCRIPT END **/
-
 /* IS NAVBAR ITEM ACTIVE? START */
 
 const navLinks = document.querySelectorAll(".nav-item");
@@ -94,10 +76,10 @@ ScrollReveal().reveal('.ani-free', {
 })
 
 ScrollReveal().reveal('.ani-headlink', {
+  opacity: .1,
   delay: 200,
   interval: 300,
-  duration: 2500,
-  opacity: .1,
+  duration: 2500
 });
 
 ScrollReveal().reveal('.ani-oneWeekFree', {

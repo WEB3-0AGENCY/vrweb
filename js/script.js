@@ -54,7 +54,7 @@ ScrollReveal().reveal('.ani-right', {
 ScrollReveal().reveal('.ani-bottom', {
   origin: 'bottom',
   distance: '10rem',
-  duration: 1000,
+  duration: 3000,
   easeing: 'ease-in'
 });
 ScrollReveal().reveal('.ani-fade-up', {
@@ -72,6 +72,7 @@ ScrollReveal().reveal('.ani-delay2', {
 
 ScrollReveal().reveal('.ani-free', {
   delay: 500,
+  duration: 300,
   interval: 750
 })
 
@@ -83,7 +84,7 @@ ScrollReveal().reveal('.ani-headlink', {
 });
 
 ScrollReveal().reveal('.ani-oneWeekFree', {
-  delay: 3050,
+  delay: 500,
   duration: 2000,
   interval: 750,
   scale: .8
@@ -93,6 +94,10 @@ ScrollReveal().reveal('.ani-scale', {
   duration: 1200,
   scale: .4,
   delay: 500,
+});
+
+ScrollReveal().reveal('.interval', {
+  duration: 1200,
   interval: 700
 });
 

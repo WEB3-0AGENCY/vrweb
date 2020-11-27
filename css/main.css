@@ -33,6 +33,7 @@ html {
   padding: 0;
   list-style: none;
   text-decoration: none;
+  scroll-behavior: smooth;
   /** HEADER GRADIENT **/
   /** HEADLINES AND FONTS **/
 }

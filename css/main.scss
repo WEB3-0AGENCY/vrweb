@@ -421,12 +421,22 @@ section {
           margin-right: 20px;
         }
 
+
         .carousel-control-prev {
           height: 5rem;
           width: 5rem;
           top: 37rem;
-          left: 95rem;
+          left: 97rem;
           position: absolute;
+          transition: .4s all;
+
+          &:focus {
+            transform: scaleX(1.5);
+          }
+
+          img {
+            rotate: 180deg !important;
+          }
         }
 
         .carousel-control-next {
@@ -435,6 +445,12 @@ section {
           top: 37rem;
           right: 4rem;
           position: absolute;
+          transition: .2s all;
+          
+          &:focus {
+            transform: scaleX(1.5);
+          }
+
         }
       }
     }
@@ -446,9 +462,12 @@ section {
 
     .card {
       border-radius: 2rem;
+      margin-bottom: 2rem;
+      
+       filter: drop-shadow(0 2rem .3rem #8c60c9);
+       
 
       @media screen and (max-width: 768px) {
-        
           width: 80%;
           height: 80%;
         
@@ -463,7 +482,7 @@ section {
 
       @media screen and (min-width: 768px) {
         .card-inner {
-          padding: 6rem 7rem;
+          padding: 4rem 7rem; 
         }
       }
 

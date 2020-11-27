@@ -402,8 +402,17 @@ section .testimony .wrapper-testimony h1 {
     height: 5rem;
     width: 5rem;
     top: 37rem;
-    left: 95rem;
+    left: 97rem;
     position: absolute;
+    -webkit-transition: .4s all;
+    transition: .4s all;
+  }
+  section .testimony .wrapper-testimony .carousel-control-prev:focus {
+    -webkit-transform: scaleX(1.5);
+            transform: scaleX(1.5);
+  }
+  section .testimony .wrapper-testimony .carousel-control-prev img {
+    rotate: 180deg !important;
   }
   section .testimony .wrapper-testimony .carousel-control-next {
     height: 5rem;
@@ -411,6 +420,12 @@ section .testimony .wrapper-testimony h1 {
     top: 37rem;
     right: 4rem;
     position: absolute;
+    -webkit-transition: .2s all;
+    transition: .2s all;
+  }
+  section .testimony .wrapper-testimony .carousel-control-next:focus {
+    -webkit-transform: scaleX(1.5);
+            transform: scaleX(1.5);
   }
 }
 
@@ -422,6 +437,9 @@ section .testimony .wrapper-testimony h1 {
 
 section .testimony .card {
   border-radius: 2rem;
+  margin-bottom: 2rem;
+  -webkit-filter: drop-shadow(0 2rem 0.3rem #8c60c9);
+          filter: drop-shadow(0 2rem 0.3rem #8c60c9);
 }
 
 @media screen and (max-width: 768px) {
@@ -440,7 +458,7 @@ section .testimony .card {
 
 @media screen and (min-width: 768px) {
   section .testimony .card .card-inner {
-    padding: 6rem 7rem;
+    padding: 4rem 7rem;
   }
 }
 

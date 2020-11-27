@@ -127,8 +127,13 @@ section .features .box-wrapper .box1, section .features .box-wrapper .box2, sect
 /* Navbar Scroll Down Background COLOR START */
 .nav-colored {
   background-color: rgba(246, 250, 253, 0.8);
-  padding: 2rem 2rem;
   border-radius: 5rem !important;
+}
+
+@media screen and (min-width: 991px) {
+  .nav-colored {
+    padding: 2rem 2rem;
+  }
 }
 
 .nav-transparent {
@@ -139,6 +144,14 @@ section .features .box-wrapper .box1, section .features .box-wrapper .box2, sect
 /************** HEADER STARTING *************/
 header .navbar {
   text-align: right;
+}
+
+@media screen and (max-width: 991px) {
+  header .navbar {
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    border-radius: 5rem !important;
+  }
 }
 
 header .navbar-light {
@@ -169,7 +182,8 @@ header .navbar .active a {
 header .navbar .collapsing {
   font-family: Avenir-Medium;
   color: #4b5d68;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  margin-right: 2.2rem;
 }
 
 header nav {
@@ -184,7 +198,8 @@ header nav {
 }
 
 header nav .collapse ul li a {
-  font-size: 1.6rem;
+  margin-right: 2.2rem;
+  font-size: 1.8rem;
   font-family: Avenir-Medium;
   color: #4b5d68;
 }
@@ -192,7 +207,7 @@ header nav .collapse ul li a {
 @media screen and (min-width: 999px) {
   header nav .collapse ul li a {
     margin-right: 4rem;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -408,13 +423,21 @@ section .testimony .card {
   border-radius: 2rem;
 }
 
-@media screen and (max-width: 489px) {
-  section .testimony .card .card-inner {
-    padding: 2rem 2rem;
+@media screen and (max-width: 768px) {
+  section .testimony .card {
+    width: 80%;
+    height: 80%;
   }
 }
 
-@media screen and (min-width: 489px) {
+@media screen and (max-width: 768px) {
+  section .testimony .card .card-inner {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
   section .testimony .card .card-inner {
     padding: 6rem 7rem;
   }
@@ -438,9 +461,21 @@ section .testimony .card .card-body .card-text p {
   color: #4b5d68;
 }
 
-section .testimony .card .card-body img {
-  width: 8rem;
-  height: 8rem;
+@media screen and (max-width: 500px) {
+  section .testimony .card .card-body .card-text p {
+    margin-top: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  section .testimony .card .card-body .profile {
+    padding-right: 0;
+    text-align: right;
+  }
+}
+
+section #3dots {
+  margin-right: -5rem !important;
 }
 
 section .section-4 {

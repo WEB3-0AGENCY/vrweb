@@ -93,7 +93,7 @@ ScrollReveal().reveal('.ani-oneWeekFree', {
 ScrollReveal().reveal('.ani-scale', {
   duration: 1200,
   scale: .4,
-  delay: 100,
+  delay: 300,
 });
 
 ScrollReveal().reveal('.interval', {
@@ -102,9 +102,14 @@ ScrollReveal().reveal('.interval', {
 });
 
 ScrollReveal().reveal('.interval2', {
-  delay: 1500,
   duration: 1200,
   interval: 700
+});
+
+ScrollReveal().reveal('.interval3', {
+  delay: 1200,
+  duration: 1200,
+  interval: 800
 });
 
 /* SCROLL REVEAL ANIMATIONS END */

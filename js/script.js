@@ -78,8 +78,8 @@ ScrollReveal().reveal('.ani-free', {
 
 ScrollReveal().reveal('.ani-headlink', {
   opacity: .1,
-  delay: 300,
-  interval: 300,
+  delay: 500,
+  interval: 500,
   duration: 2500
 });
 

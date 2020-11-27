@@ -141,6 +141,20 @@ header .navbar {
   text-align: right;
 }
 
+header .navbar-light {
+  color: transparent !important;
+  border-color: transparent !important;
+}
+
+header .navbar-toggler {
+  color: transparent !important;
+  border-color: transparent !important;
+}
+
+header .navbar-toggler[type="button"] {
+  outline: none;
+}
+
 @media screen and (max-width: 999px) {
   header .navbar {
     background-color: rgba(246, 250, 253, 0.8);

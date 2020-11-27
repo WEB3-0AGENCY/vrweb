@@ -160,6 +160,23 @@ html {
 header {
   .navbar {
     text-align: right;
+
+    &-light{
+      color: transparent !important;
+      border-color: transparent !important;
+    }
+
+    &-toggler{
+      color: transparent !important;
+      border-color: transparent !important;
+
+      &[type="button"] {
+        outline: none;
+      }
+    }
+
+    
+
     @media screen and (max-width: 999px) {
       background-color: rgba(#f6fafd, 0.8);
       border-radius: 1rem;

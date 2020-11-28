@@ -34,17 +34,17 @@ html {
   list-style: none;
   text-decoration: none;
   scroll-behavior: smooth;
-  /** HEADER GRADIENT **/
   /** HEADLINES AND FONTS **/
+}
+
+html body {
+  margin-top: 13rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f6fafd), to(#fff));
+  background: linear-gradient(#f6fafd, #fff);
 }
 
 html a:hover {
   text-decoration: none;
-}
-
-html #about {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f6fafd), to(#fff));
-  background: linear-gradient(#f6fafd, #fff);
 }
 
 html h1 {
@@ -84,17 +84,11 @@ html p {
 
 @media (min-width: 50px) {
   html {
-    font-size: 8px;
+    font-size: 7px;
   }
 }
 
 @media (min-width: 960px) {
-  html {
-    font-size: 9px;
-  }
-}
-
-@media (max-width: 1200px) {
   html {
     font-size: 9px;
   }
@@ -129,6 +123,8 @@ section .features .box-wrapper .box1, section .features .box-wrapper .box2, sect
 .nav-colored {
   background-color: rgba(246, 250, 253, 0.8);
   border-radius: 5rem !important;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 @media screen and (min-width: 991px) {
@@ -139,66 +135,61 @@ section .features .box-wrapper .box1, section .features .box-wrapper .box2, sect
 
 .nav-transparent {
   background-color: transparent;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-/* Navbar Scroll Down Background COLOR END */
-/************** HEADER STARTING *************/
-header .navbar {
+.navbar {
   text-align: right;
 }
 
 @media screen and (max-width: 991px) {
-  header .navbar {
+  .navbar {
     padding-top: .2rem;
     padding-bottom: .2rem;
     border-radius: 5rem !important;
   }
 }
 
-header .navbar-light {
+.navbar-light {
   color: transparent !important;
   border-color: transparent !important;
 }
 
-header .navbar-toggler {
+.navbar-toggler {
   color: transparent !important;
   border-color: transparent !important;
 }
 
-header .navbar-toggler[type="button"] {
+.navbar-toggler[type="button"] {
   outline: none;
 }
 
 @media screen and (max-width: 999px) {
-  header .navbar {
+  .navbar {
     background-color: rgba(246, 250, 253, 0.8);
     border-radius: 1rem;
   }
 }
 
-header .navbar .active a {
+.navbar .active a {
   color: #f063b8 !important;
 }
 
-header .navbar .collapsing {
+.navbar .collapsing {
   font-family: Avenir-Medium;
   color: #4b5d68;
   font-size: 1.8rem;
   margin-right: 2.2rem;
 }
 
-header nav {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
 @media screen and (max-width: 991px) {
-  header nav .button-demo {
+  nav .button-demo {
     display: none;
   }
 }
 
-header nav .collapse ul li a {
+nav .collapse ul li a {
   margin-right: 2.2rem;
   font-size: 1.8rem;
   font-family: Avenir-Medium;
@@ -206,35 +197,34 @@ header nav .collapse ul li a {
 }
 
 @media screen and (min-width: 999px) {
-  header nav .collapse ul li a {
+  nav .collapse ul li a {
     margin-right: 4rem;
     font-size: 1.8rem;
   }
 }
 
-header nav .collapse ul li a:hover {
+nav .collapse ul li a:hover {
   color: #f063b8 !important;
 }
 
-header .header-wrapper {
-  margin-top: 13rem;
+/* Navbar Scroll Down Background COLOR END */
+/************** HEADER STARTING *************/
+#headline .header-wrapper {
   position: relative;
-  -webkit-transition: all 2s;
-  transition: all 2s;
 }
 
-header .header-wrapper h1 {
+#headline .header-wrapper h1 {
   font-size: 6.2rem;
 }
 
 @media screen and (max-width: 991px) {
-  header .header-wrapper h1 {
+  #headline .header-wrapper h1 {
     text-align: center;
     font-size: 5.7rem;
   }
 }
 
-header .header-wrapper p {
+#headline .header-wrapper p {
   font-size: 1.8rem;
   font-family: "Avenir-Medium";
   margin: 3rem 0;
@@ -244,7 +234,7 @@ header .header-wrapper p {
 }
 
 @media screen and (max-width: 991px) {
-  header .header-wrapper p {
+  #headline .header-wrapper p {
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -253,27 +243,27 @@ header .header-wrapper p {
   }
 }
 
-header .header-wrapper .button-learn-more {
+#headline .header-wrapper .button-learn-more {
   background-color: #9c69e2;
   position: absolute;
   margin: 18rem 0;
 }
 
-header .header-wrapper .button-learn-more:hover {
+#headline .header-wrapper .button-learn-more:hover {
   background-color: #fff;
   border: 2px solid #9c69e2;
   color: #9c69e2;
 }
 
 @media screen and (max-width: 1310px) {
-  header .header-wrapper .button-learn-more {
+  #headline .header-wrapper .button-learn-more {
     margin-top: 13rem;
     padding: 1rem 3.7rem;
     margin-left: 15rem;
   }
 }
 
-header .header-wrapper #header-photo {
+#headline .header-wrapper #header-photo {
   margin-top: 5rem;
   margin-left: -23rem;
   margin-bottom: -3rem;
@@ -281,7 +271,7 @@ header .header-wrapper #header-photo {
 }
 
 @media screen and (min-device-width: 991px) and (max-width: 1310px) {
-  header .header-wrapper #header-photo {
+  #headline .header-wrapper #header-photo {
     max-width: 100%;
     height: auto;
     margin-left: 0;
@@ -291,7 +281,7 @@ header .header-wrapper #header-photo {
 }
 
 @media screen and (max-width: 991px) {
-  header .header-wrapper #header-photo {
+  #headline .header-wrapper #header-photo {
     width: 0px;
     height: 0px;
     display: none;
@@ -301,7 +291,6 @@ header .header-wrapper #header-photo {
 /************** HEADER END ************/
 /*************** SECTIONS START ****************/
 section {
-  margin: 9rem 0;
   /** SECTION 1 START **/
   /** SECTION 1 END **/
   /** SECTION 2 START (FUTURE) **/
@@ -310,6 +299,10 @@ section {
   /** SECTION 3 END (TESTIMONY) **/
   /** SECTION 4 START (TRY FOR FREE SECTION AND BUTTONS) **/
   /** SECTION 4 END (TRY FOR FREE SECTION AND BUTTONS) **/
+}
+
+section:not(:first-of-type) {
+  margin: 9rem 0;
 }
 
 section .wrapper-leveldata {
@@ -396,7 +389,7 @@ section .testimony .wrapper-testimony h1 {
     border-radius: 100%;
   }
   section .testimony .wrapper-testimony .carousel-indicators li:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 2rem;
   }
   section .testimony .wrapper-testimony .carousel-control-prev {
     height: 5rem;
@@ -438,8 +431,13 @@ section .testimony .wrapper-testimony h1 {
 section .testimony .card {
   border-radius: 2rem;
   margin-bottom: 2rem;
-  -webkit-filter: drop-shadow(0 2rem 0.3rem #8c60c9);
-          filter: drop-shadow(0 2rem 0.3rem #8c60c9);
+}
+
+@media screen and (min-width: 1100px) {
+  section .testimony .card {
+    -webkit-filter: drop-shadow(0 2rem 0.3rem #8c60c9);
+            filter: drop-shadow(0 2rem 0.3rem #8c60c9);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -531,7 +529,7 @@ section .section-4 h1 {
 
 section .section-4 p {
   font-family: Avenir-Medium;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 section .section-4 .button-demo:hover {

@@ -36,14 +36,15 @@ html {
   text-decoration: none;
   scroll-behavior: smooth;
 
+  body {
+    margin-top: 13rem;
+    background: linear-gradient(#f6fafd, #fff);
+  }
+
   a:hover {
     text-decoration: none;
   }
 
-  /** HEADER GRADIENT **/
-  #about {
-    background: linear-gradient(#f6fafd, #fff);
-  }
 
   /** HEADLINES AND FONTS **/
 
@@ -86,7 +87,7 @@ html {
 
 @media (min-width: 50px) {
   html {
-    font-size: 8px;
+    font-size: 7px;
   }
 }
 
@@ -96,11 +97,7 @@ html {
   }
 }
 
-@media (max-width: 1200px) {
-  html {
-    font-size: 9px;
-  }
-}
+
 
 @media (min-width: 1300px) {
   html {
@@ -148,7 +145,7 @@ html {
 .nav-colored {
   background-color: rgba(#f6fafd, 0.8);
   border-radius: 5rem !important;
-  
+  transition: all 0.5s ease;
   @media screen and (min-width: 991px) {
     padding: 2rem 2rem;
   }
@@ -156,88 +153,90 @@ html {
 }
 .nav-transparent {
   background-color: transparent;
+  transition: all 0.5s ease;
+}
+
+
+.navbar {
+  
+  @media screen and (max-width: 991px) {
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    border-radius: 5rem !important;
+  }
+  
+  text-align: right;
+
+  &-light{
+    color: transparent !important;
+    border-color: transparent !important;
+  }
+
+  &-toggler{
+    color: transparent !important;
+    border-color: transparent !important;
+
+    &[type="button"] {
+      outline: none;
+    }
+  }
+
+  @media screen and (max-width: 999px) {
+    background-color: rgba(#f6fafd, 0.8);
+    border-radius: 1rem;
+  }
+
+  .active a {
+    color: #f063b8 !important;
+  }
+
+  .collapsing {
+    font-family: Avenir-Medium;
+    color: #4b5d68;
+    font-size: 1.8rem;
+    margin-right: 2.2rem;
+  }
+}
+
+nav {
+  
+
+  @media screen and (max-width: 991px) {
+    .button-demo {
+      display: none;
+    }
+  }
+
+  .collapse {
+    ul {
+      li {
+        a {
+          margin-right: 2.2rem;
+          @media screen and (min-width: 999px) {
+            margin-right: 4rem;
+            font-size: 1.8rem;
+          }
+
+          font-size: 1.8rem;
+          font-family: Avenir-Medium;
+          color: #4b5d68;
+          &:hover {
+            color: #f063b8 !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* Navbar Scroll Down Background COLOR END */
 
 /************** HEADER STARTING *************/
 
-header {
-  .navbar {
-
-    @media screen and (max-width: 991px) {
-      padding-top: .2rem;
-      padding-bottom: .2rem;
-      border-radius: 5rem !important;
-    }
-    
-    text-align: right;
-
-    &-light{
-      color: transparent !important;
-      border-color: transparent !important;
-    }
-
-    &-toggler{
-      color: transparent !important;
-      border-color: transparent !important;
-
-      &[type="button"] {
-        outline: none;
-      }
-    }
-
-    @media screen and (max-width: 999px) {
-      background-color: rgba(#f6fafd, 0.8);
-      border-radius: 1rem;
-    }
-
-    .active a {
-      color: #f063b8 !important;
-    }
-
-    .collapsing {
-      font-family: Avenir-Medium;
-      color: #4b5d68;
-      font-size: 1.8rem;
-      margin-right: 2.2rem;
-    }
-  }
-
-  nav {
-    transition: all 0.5s;
-
-    @media screen and (max-width: 991px) {
-      .button-demo {
-        display: none;
-      }
-    }
-
-    .collapse {
-      ul {
-        li {
-          a {
-            margin-right: 2.2rem;
-            @media screen and (min-width: 999px) {
-              margin-right: 4rem;
-              font-size: 1.8rem;
-            }
-
-            font-size: 1.8rem;
-            font-family: Avenir-Medium;
-            color: #4b5d68;
-            &:hover {
-              color: #f063b8 !important;
-            }
-          }
-        }
-      }
-    }
-  }
+#headline {
+  
   .header-wrapper {
-    margin-top: 13rem;
     position: relative;
-    transition: all 2s;
     
     h1 {
       font-size: 6.2rem;
@@ -312,8 +311,9 @@ header {
 /*************** SECTIONS START ****************/
 
 section {
-  margin: 9rem 0;
-
+  &:not(:first-of-type) {
+    margin: 9rem 0;
+  }
   /** SECTION 1 START **/
 
   .wrapper-leveldata {
@@ -418,7 +418,7 @@ section {
         }
 
         .carousel-indicators li:not(:last-child) {
-          margin-right: 20px;
+          margin-right: 2rem;
         }
 
 
@@ -464,8 +464,10 @@ section {
       border-radius: 2rem;
       margin-bottom: 2rem;
       
-       filter: drop-shadow(0 2rem .3rem #8c60c9);
-       
+      @media screen and (min-width: 1100px) {
+        filter: drop-shadow(0 2rem .3rem #8c60c9);
+      }
+         
 
       @media screen and (max-width: 768px) {
           width: 80%;
@@ -567,7 +569,7 @@ section {
 
     p {
       font-family: Avenir-Medium;
-      font-size: 18px;
+      font-size: 1.8rem;
     }
 
     .button-demo {

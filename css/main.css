@@ -122,7 +122,6 @@ section .features .box-wrapper .box1, section .features .box-wrapper .box2, sect
 /* Navbar Scroll Down Background COLOR START */
 .nav-colored {
   background-color: rgba(246, 250, 253, 0.8);
-  border-radius: 5rem !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -173,7 +172,7 @@ section .features .box-wrapper .box1, section .features .box-wrapper .box2, sect
 }
 
 .navbar .active a {
-  color: #f063b8 !important;
+  color: #000 !important;
 }
 
 .navbar .collapsing {
@@ -307,7 +306,7 @@ section:not(:first-of-type) {
 
 section .wrapper-leveldata {
   border-radius: 5rem;
-  background-color: rgba(240, 99, 184, 0.15);
+  background-color: #007bff75;
 }
 
 section .wrapper-leveldata p {
